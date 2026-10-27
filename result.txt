@@ -1,0 +1,117 @@
+Data Count : 10000
+
+Random Data
+Number of Trials : 100
+All results sorted correctly : YES
+
+Selection Sort
+Total Comparisons   : 4999500000
+Average Comparisons : 49995000
+Average Movements   : 29972
+
+Bubble Sort
+Total Comparisons   : 4999500000
+Average Comparisons : 49995000
+Average Movements   : 75003881
+
+Bubble Sort (Early Termination)
+Total Comparisons   : 4998597413
+Average Comparisons : 49985974
+Average Movements   : 75003881
+
+Insertion Sort
+Total Comparisons   : 2501128421
+Average Comparisons : 25011284
+Average Movements   : 25021291
+
+------------------------------------
+
+Sorted Data
+
+Selection Sort
+Comparisons : 49995000
+Movements   : 0
+Sorted      : OK
+
+Bubble Sort
+Comparisons : 49995000
+Movements   : 0
+Sorted      : OK
+
+Bubble Sort (Early Termination)
+Comparisons : 9999
+Movements   : 0
+Sorted      : OK
+
+Insertion Sort
+Comparisons : 9999
+Movements   : 19998
+Sorted      : OK
+
+------------------------------------
+
+Reverse-Sorted Data
+
+Selection Sort
+Comparisons : 49995000
+Movements   : 15075
+Sorted      : OK
+
+Bubble Sort
+Comparisons : 49995000
+Movements   : 149984841
+Sorted      : OK
+
+Bubble Sort (Early Termination)
+Comparisons : 49995000
+Movements   : 149984841
+Sorted      : OK
+
+Insertion Sort
+Comparisons : 49995000
+Movements   : 50014945
+Sorted      : OK
+
+------------------------------------
+
+Partially Sorted Data
+
+Selection Sort
+Comparisons : 49995000
+Movements   : 1509
+Sorted      : OK
+
+Bubble Sort
+Comparisons : 49995000
+Movements   : 9168855
+Sorted      : OK
+
+Bubble Sort (Early Termination)
+Comparisons : 49729644
+Movements   : 9168855
+Sorted      : OK
+
+Insertion Sort
+Comparisons : 3066284
+Movements   : 3076283
+Sorted      : OK
+
+------------------------------------
+
+Stability Verification
+
+[Small example] (key1,key2)#original_order
+  Original              : (527,100)#0 (527,200)#1 (125,300)#2 (892,400)#3
+  Selection Sort        : (125,300)#2 (527,200)#1 (527,100)#0 (892,400)#3
+  Bubble Sort           : (125,300)#2 (527,100)#0 (527,200)#1 (892,400)#3
+  Insertion Sort (>)    : (125,300)#2 (527,100)#0 (527,200)#1 (892,400)#3
+  Insertion Sort (>=)   : (125,300)#2 (527,200)#1 (527,100)#0 (892,400)#3
+
+[Test data] 1000 items, key1 in 0..49 (many duplicates)
+Selection Sort       : NOT Stable (order violations = 313, sorted = OK)
+Bubble Sort          : Stable (order violations = 0, sorted = OK)
+Bubble Sort (Early)  : Stable (order violations = 0, sorted = OK)
+Insertion Sort (>)   : Stable (order violations = 0, sorted = OK)
+Insertion Sort (>=)  : NOT Stable (order violations = 950, sorted = OK)
+
+[Insertion Sort on test data] (>) : cmp=247493 mov=248494 | (>=) : cmp=257468 mov=258491
